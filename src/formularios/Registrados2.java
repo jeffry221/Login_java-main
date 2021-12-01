@@ -27,6 +27,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import java.awt.Color;
+import java.awt.Toolkit;
 
 public class Registrados2 {
 
@@ -83,6 +84,7 @@ public class Registrados2 {
 	 */
 	private void initialize() {
 		frmRegistrados = new JFrame();
+		frmRegistrados.setIconImage(Toolkit.getDefaultToolkit().getImage(Registrados2.class.getResource("/imagenes/registrarse.png")));
 		frmRegistrados.setTitle("Registrados");
 		frmRegistrados.setBounds(100, 100, 884, 529);
 		frmRegistrados.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -545,6 +547,8 @@ public class Registrados2 {
 				btnNuevo.setVisible(true);
 				btnCerrarSeccion.setVisible(true);
 				btnEliminar.setVisible(true);
+				btnActualizar1.setVisible(false);
+				btnBuscar.setVisible(true);
 				if (ok > 0) {
 
 					MySQLConexion con1 = new MySQLConexion();
